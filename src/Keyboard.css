@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.Keyboard {
+    background: #000;
+    overflow: hidden;
+    width: 400px;
+    padding: 5px;
+}
+
+.Key {
+    float: left;
+    cursor: pointer;
+    position: relative;
+}
+
+.Key.white {
+    width: 12.28%;
+    height: 140px;
+    color: #fff;
+    margin: 3px 1%;
+    background: #fff;
+}
+
+.Key.black {
+    width: 7%;
+    height: 70px;
+    margin: 0 -3.5%;
+    background: #000;
+    z-index: 2;
+}
+
+.Key:hover,
+.Key.active {
+    background: red;
+}
+
+.Key::after,
+.Key::before {
+    content: attr(data-letter);
+    position: absolute;
+    color: #333;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    font-size: 0.9em;
+}
+
+.Key::before {
+    content: attr(data-keyref);
+    bottom: 32px;
+    opacity: 0.6;
+    font-size: 0.7em;
+}
+
+.Key.black::after,
+.Key.black::before {
+    color: #fff;
+}

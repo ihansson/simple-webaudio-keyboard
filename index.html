@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Keyboard</title>
+    <link href="src/Keyboard.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<h1>Simple Web Audio Keyboard</h1>
+
+	<h2>Type</h2>
+	<select id="KeyboardTypeSelect">
+		<option>sine</option>
+		<option>square</option>
+		<option>sawtooth</option>
+		<option>triangle</option>
+	</select>
+
+	<h2>Volume</h2>
+	<input type="range" id="KeyboardVolumeRange" />
+
+	<h2>Keyboard</h2>
+    <div id="KeyboardApp" class="Keyboard">
+        <div class="Key white" data-tone="1" data-keyref="z" data-letter="C"></div>
+        <div class="Key black" data-tone="2" data-keyref="s" data-letter="C#"></div>
+        <div class="Key white" data-tone="3" data-keyref="x" data-letter="D"></div>
+        <div class="Key black" data-tone="4" data-keyref="d" data-letter="D#"></div>
+        <div class="Key white" data-tone="5" data-keyref="c" data-letter="E"></div>
+        <div class="Key white" data-tone="6" data-keyref="v" data-letter="F"></div>
+        <div class="Key black" data-tone="7" data-keyref="g" data-letter="F#"></div>
+        <div class="Key white" data-tone="8" data-keyref="b" data-letter="G"></div>
+        <div class="Key black" data-tone="9" data-keyref="h" data-letter="G#"></div>
+        <div class="Key white" data-tone="10" data-keyref="n" data-letter="A"></div>
+        <div class="Key black" data-tone="11" data-keyref="j" data-letter="A#"></div>
+        <div class="Key white" data-tone="12" data-keyref="m" data-letter="B"></div>
+    </div>
+    <script type="text/javascript" src="vendor/lodash.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="src/app.js"></script>
+</body>
+
+</html>
